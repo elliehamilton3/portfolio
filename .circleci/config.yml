@@ -39,9 +39,9 @@ jobs:
       - setup_remote_docker
       - attach_workspace:
           at: ./
-      - add_ssh_keys:
-          fingerprints:
-            - "02:4a:aa:a6:10:42:5c:d7:70:2c:63:af:d4:49:38:ad"
+      - run:
+          name: Avoid hosts unknown for github
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run:
           command: sh deploy.sh
           
