@@ -44,7 +44,7 @@ jobs:
           command: echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - add_ssh_keys:
           fingerprints:
-            - "34:e9:98:03:dc:83:25:76:81:97:66:eb:41:a8:da:46"
+            - "e1:71:1a:ef:a4:0b:e5:e2:43:ba:6e:0b:c1:6a:4e:02"
       - run:
           command: sh deploy.sh
           
