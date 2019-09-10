@@ -12,6 +12,10 @@ export default {
       default: "",
       type: String
     },
+    title: {
+      default: "",
+      type: String
+    },
     inline: {
       default: false,
       type: Boolean
@@ -22,6 +26,8 @@ export default {
     var result;
     if (this.inline) {
       result = md.renderInline(this.content);
+    } else if  (this.title) {
+      result = md.render(this.title);
     } else {
       result = md.render(this.content);
     }

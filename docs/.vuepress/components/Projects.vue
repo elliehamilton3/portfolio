@@ -71,8 +71,6 @@ export default {
         img 
           max-width 150px
           max-height 150px
-          height 150px
-          border: 1px solid #eee;
           border-radius 0.2rem
           object-fit cover
       .project-content
