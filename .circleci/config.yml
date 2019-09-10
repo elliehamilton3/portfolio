@@ -27,9 +27,10 @@ jobs:
       - run: npm run docs:build
 
       - persist_to_workspace:
-          root: docs/.vuepress/dist
+          root: ./
           paths:
-            - ./
+            - docs/.vuepress/dist
+            - deploy.sh
 
   deploy:
     docker:
